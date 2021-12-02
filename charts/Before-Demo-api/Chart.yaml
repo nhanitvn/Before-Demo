@@ -1,0 +1,6 @@
+apiVersion: v2
+name: "Before-Demo-api"
+version: "0.0.1"
+description: API layer for Before Demo
+appVersion: "0.0.1"
+type: application
