@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  Before-Demo-api:
+    build:
+      context: before_demo_api
+    ports:
+      - "8080:8080"
+  Before-Demo-ui:
+    build:
+      context: Before-Demo-ui
+      args:
+        APP_SERVER_HOST: localhost
+        APP_SERVER_PORT: 8080
+    ports:
+      - "80:80"
+    depends_on:
+      - Before-Demo-api
+    links:
+      - Before-Demo-api
